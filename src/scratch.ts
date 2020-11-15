@@ -95,4 +95,26 @@ const num1: number = 5;
 // @ts-ignore
 const num2: number = 5;
 
+/*------------------------------------------------------------------------------------------------*/
+
+// Unknown is a top type - it can hold any value
+// Difference between "any" and "unknown" - unknown is on us to make a check on the value
+
+function somethingRisky() { }
+
+// A way to type assertions more effectively
+// Defined return type is of Error - "err is Error"
+// If an error, will return an error. Else will throw
+function assertIsError(err: any): asserts err is Error {
+  if (!(err instanceof Error)) throw new Error(`Not an error: ${err}`);
+}
+
+try {
+  somethingRisky();
+} catch (err: unknown) {
+  assertIsError(err);
+  console.log(err.stack)
+}
+
+
 export * as foo from './data/channels';
