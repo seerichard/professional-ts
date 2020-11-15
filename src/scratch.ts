@@ -116,5 +116,11 @@ try {
   console.log(err.stack)
 }
 
+/*------------------------------------------------------------------------------------------------*/
+
+// Can now import type ONLY
+// Reduces code sent to the client
+import type { useAsyncDataEffect } from '../src/utils/api';
+// useAsyncDataEffect(); will not work - 'useAsyncDataEffect' cannot be used as a value because it was imported using 'import type'
 
 export * as foo from './data/channels';
