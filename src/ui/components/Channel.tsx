@@ -6,12 +6,12 @@ import ChannelHeader from './Channel/Header';
 import ChannelMessage from './Channel/Message';
 import Loading from './Loading';
 
-
-const Channel = ({
+// <any> stands for the props passed through
+const Channel: React.FunctionComponent<any> = ({
   channel,
 }) => {
 
-  const [messages, setMessages] = React.useState();
+  const [messages, setMessages] = React.useState<any[]>();
   useAsyncDataEffect(
     () => getChannelMessages(channel.teamId, channel.id),
     {
