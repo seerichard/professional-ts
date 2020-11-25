@@ -80,7 +80,8 @@ const val: JSONValue = {
 
 // Template type literal
 // Could be good for CSS-in-JS, React onClick functions etc
-type Corner = `${'top' | 'bottom'}-${'left' | 'right'}`;
+// Commented out due to type error
+// type Corner = `${'top' | 'bottom'}-${'left' | 'right'}`;
 
 /*------------------------------------------------------------------------------------------------*/
 
@@ -88,12 +89,12 @@ type Corner = `${'top' | 'bottom'}-${'left' | 'right'}`;
 
 // Unused directive - shows ts-expect-error is no longer necessary
 // Could surface bugs accidentally added through changing types
-// @ts-expect-error
-const num1: number = 5;
+// Using command: @ts-expect-error
+const num1 = 5;
 
 // Will completely ignore everything
 // @ts-ignore
-const num2: number = 5;
+const num2 = 5;
 
 /*------------------------------------------------------------------------------------------------*/
 
