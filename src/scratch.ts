@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Optional Chaining
 const x: {
   user: {
