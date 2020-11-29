@@ -2,6 +2,7 @@
   "extends": "dtslint/dtslint.json",
   "rules": {
       "semicolon": false,
-      "indent": [true, "tabs"]
+      "indent": [true, "tabs"],
+      "no-relative-import-im-test": false
   }
 }
